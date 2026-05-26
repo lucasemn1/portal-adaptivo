@@ -72,6 +72,7 @@ export function DashboardDocumentInput(props: Props) {
   return (
     <label
       {...getRootProps()}
+      htmlFor="aqui"
       className={`
         border
         border-dashed
@@ -89,7 +90,12 @@ export function DashboardDocumentInput(props: Props) {
         cursor-pointer
       `}
     >
-      <input {...getInputProps()} className="hidden" name={props.name} />
+      <input
+        {...getInputProps()}
+        className="hidden"
+        name={props.name}
+        id="aqui"
+      />
 
       {props.file ? renderFulledDraggble() : renderDraggbleContent()}
     </label>
