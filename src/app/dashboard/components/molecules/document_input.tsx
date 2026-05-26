@@ -21,7 +21,10 @@ export function DashboardDocumentInput(props: Props) {
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop: (files) => onDrop(files.length > 0 ? files[0] : undefined),
+    onDrop: (files) => {
+      console.log("Arquivo selecionado.");
+      onDrop(files.length > 0 ? files[0] : undefined);
+    },
     accept: {
       "application/pdf": [".pdf"],
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
@@ -72,7 +75,6 @@ export function DashboardDocumentInput(props: Props) {
   return (
     <label
       {...getRootProps()}
-      htmlFor="aqui"
       className={`
         border
         border-dashed
@@ -90,12 +92,7 @@ export function DashboardDocumentInput(props: Props) {
         cursor-pointer
       `}
     >
-      <input
-        {...getInputProps()}
-        className="hidden"
-        name={props.name}
-        id="aqui"
-      />
+      <input {...getInputProps()} className="hidden" name={props.name} />
 
       {props.file ? renderFulledDraggble() : renderDraggbleContent()}
     </label>
