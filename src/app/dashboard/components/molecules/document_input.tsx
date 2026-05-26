@@ -70,7 +70,7 @@ export function DashboardDocumentInput(props: Props) {
   }, [props.file]);
 
   return (
-    <div
+    <label
       {...getRootProps()}
       className={`
         border
@@ -92,6 +92,6 @@ export function DashboardDocumentInput(props: Props) {
       <input {...getInputProps()} className="hidden" name={props.name} />
 
       {props.file ? renderFulledDraggble() : renderDraggbleContent()}
-    </div>
+    </label>
   );
 }
