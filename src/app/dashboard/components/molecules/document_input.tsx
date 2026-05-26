@@ -76,7 +76,7 @@ export function DashboardDocumentInput(props: Props) {
         cursor-pointer
       `}
     >
-      <input {...inputProps} className="hidden" name={props.name} />
+      <input {...inputProps} className="block" name={props.name} />
       {props.file ? renderFulledDraggble() : renderDraggbleContent()}
     </div>
   );
