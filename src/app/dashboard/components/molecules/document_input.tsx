@@ -44,25 +44,19 @@ export function DashboardDocumentInput(props: Props) {
     },
   });
 
-  const renderDraggbleContent = useCallback(
-    () => (
-      <div className="flex flex-col items-center gap-0! justify-center text-center">
-        <BsCloudUpload size={40} />
-        <h4 className="mt-2">Clique para selecionar ou arraste o PDF</h4>
-        <h5 className="text-sm opacity-60">PDF ou DOCX (Máx. 10MB)</h5>
-      </div>
-    ),
-    [],
+  const renderDraggbleContent = (
+    <div className="flex flex-col items-center gap-0! justify-center text-center">
+      <BsCloudUpload size={40} />
+      <h4 className="mt-2">Clique para selecionar ou arraste o PDF</h4>
+      <h5 className="text-sm opacity-60">PDF ou DOCX (Máx. 10MB)</h5>
+    </div>
   );
 
-  const renderFulledDraggble = useCallback(
-    () => (
-      <div className="flex flex-col items-center gap-0! justify-center text-center">
-        <HiDocumentCheck size={40} />
-        <h4 className="mt-2">{props.file?.name}</h4>
-      </div>
-    ),
-    [props.file],
+  const renderFulledDraggble = (
+    <div className="flex flex-col items-center gap-0! justify-center text-center">
+      <HiDocumentCheck size={40} />
+      <h4 className="mt-2">{props.file?.name}</h4>
+    </div>
   );
 
   return (
@@ -83,7 +77,7 @@ export function DashboardDocumentInput(props: Props) {
         style={{}}
         onChange={(e) => inputProps.onChange(e)}
       />
-      {props.file ? renderFulledDraggble() : renderDraggbleContent()}
+      {props.file ? renderFulledDraggble : renderDraggbleContent}
     </div>
   );
 }
