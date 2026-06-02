@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-highlight: var(--color-rose-400);
+  --color-highlight-contrast: var(--color-rose-50);
+
+  --font-roboto: "Roboto", sans-serif;
+  --font-pacifico: "Pacifico", sans-serif;
+
+  --font-display: var(--font-roboto), serif;
+  --font-secondary: var(--font-pacifico), serif;
+}
