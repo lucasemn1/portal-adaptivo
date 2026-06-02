@@ -1276,6 +1276,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+luxon@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.7.2.tgz#d697e48f478553cca187a0f8436aff468e3ba0ba"
+  integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
+
 magic-string@^0.30.21:
   version "0.30.21"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.21.tgz#56763ec09a0fa8091df27879fd94d19078c00d91"
@@ -1572,6 +1577,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+uuid@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-14.0.0.tgz#0af883220163d264ffe0c084f6b8a89b9666966d"
+  integrity sha512-Qo+uWgilfSmAhXCMav1uYFynlQO7fMFiMVZsQqZRMIXp0O7rR7qjkj+cPvBHLgBqi960QCoo/PH2/6ZtVqKvrg==
 
 vite@^8.0.12:
   version "8.0.16"
